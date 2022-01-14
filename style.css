@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ms_container{
+    height: 500px;
+    margin-top:100px ;
+}
+
+.ms_anteprima,
+.ms_slider{
+    height: 100%;
+}
+
+.ms_anteprima img{
+    width: 100%;
+    height: 100%;
+}
+
+.ms_container2{
+    height: 100%;
+    position: relative;
+}
+
+.immagine-dx{
+    height: calc(100% / 5);
+    width: 100%;
+}
+
+.immagine-sx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    display: none;
+}
+
+.immagine-sx.active{
+    display: block;
+}
+
+.immagine-sx,
+.immagini-dx{
+    position: relative;
+}
+
+.immagine-dx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testo{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+
+.my_absolute_top{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-18px,0);
+}
+
+.my_absolute_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-18px,0);
+}
+
+.arrow{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(214, 214, 214);
+    opacity: 0.8;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.my_relative{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+h_100{
+    height: 100%;
+}

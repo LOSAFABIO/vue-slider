@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Carosello</title>
+    <title>Carosello</title>
+</head>
+<body>
+    <div id="myApp">
+        <div class="container">
+            <div class="row ms_container">
+                <div class="col-10 ms_anteprima immagini-sinistra p-0">
+                    <div v-for="(elemento, indice) in items.image" :class="imgCorrente(indice)" class="my_relative" >
+                            <img :src="elemento"  alt=""> 
+                            <div class="testo my_absolute">
+                                <h1>{{items.title[indice]}}</h1>
+                                <p>{{items.text[indice]}}</p>
+                            </div>      
+                    </div>
+                </div>
+                <div class="col-2 ms_slider p-0">
+                    <div class="row flex-column ms_container2 my_relative">
+                        <div v-for="(elemento, indice) in items.image" class="immagine-dx" >
+                            <img class="immagine-dx" :src="elemento" alt="">
+                            <div @click="prev" class="my_absolute_top arrow prev fa-solid fa-angle-up"></div>
+                            <div @click="down"class="my_absolute_bottom arrow down fa-solid fa-chevron-down"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script input="text/JavaScript" src="myscript.js"></script>
+</body>
+</html>
