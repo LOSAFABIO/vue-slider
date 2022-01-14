@@ -26,9 +26,9 @@
                 <div class="col-2 ms_slider p-0">
                     <div class="row flex-column ms_container2 my_relative">
                         <div v-for="(elemento, indice) in items.image" class="immagine-dx" >
-                            <img class="immagine-dx" :src="elemento" alt="">
+                            <img @click="grande" class="immagine-dx" :src="elemento" alt="">
                             <div @click="prev" class="my_absolute_top arrow prev fa-solid fa-angle-up"></div>
-                            <div @click="down"class="my_absolute_bottom arrow down fa-solid fa-chevron-down"></div>
+                            <div @click="down" class="my_absolute_bottom arrow down fa-solid fa-chevron-down"></div>
                         </div>
                     </div>
                 </div>

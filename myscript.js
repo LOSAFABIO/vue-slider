@@ -61,17 +61,24 @@ let myApp = new Vue({
             }
             return "d-none";
         },    
-        prev : function(){
+        down : function(){
             this.corrente ++;
             if(this.corrente == this.items.image.length){
                 this.corrente = 0
             }
         },
-        down: function(){
+        prev: function(){
             this.corrente --;
             if(this.corrente < 0 ){
                 this.corrente = this.items.image.length - 1 
             }   
         },
+        grande : function(elemento){
+            if(this.items.image == this.corrente){
+                return "active";
+            }
+            return "d-none";
+        },    
+
     }
 })
